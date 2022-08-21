@@ -1,0 +1,38 @@
+{% extends 'travelagencyindex.html' %}
+{% block body %}
+
+
+<body>
+<form id="form1" name="form1" method="post" action="/updatepackages">
+  <table  align="center" style="width:300px">
+
+    <tr>
+      <th scope="row">Package Details </th>
+      <td><label>
+        <textarea name="textfield"  class="form-control">{{result[2]}} </textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Food Availability </th>
+      <td><label>
+        <input type="radio" name="textfield2" value="Yes" {% if result[3]=="Yes" %}checked{% endif %}/>Yes
+        <input type="radio" name="textfield2" value="No" {% if result[3]=="No"%}checked{% endif %}/>No
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Rate</th>
+      <td><label>
+        <input type="text" name="textfield3" value = "{{result[4]}}" pattern="[0-9]{3,25}"  class="form-control"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">
+        <input type="submit" name="Submit" value="UPDATE" class="form-control-submit-button"/>
+      </th>
+    </tr>
+  </table>
+  <label></label>
+</form>
+</body>
+
+{% endblock %}

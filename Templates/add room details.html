@@ -1,0 +1,41 @@
+{% extends 'hotelindex.html'%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addroomdetails1">
+  <table  style="width:300px" align="center">
+    <tr>
+      <th scope="row">Room details </th>
+      <td><label>
+        <input type="text" name="textfield" required class="form-control"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Price</th>
+      <td><label>
+        <input type="text" name="textfield2" required class="form-control"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">A/C type </th>
+      <td><label>
+        <input type="radio" name="radio" value="NonA/C" checked/>A/C
+     <input type="radio" name="radio" value="NonA/C" checked/>Non A/C
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Bed type </th>
+      <td><label>
+        <input type="text" name="textfield4" required class="form-control"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><label>
+        <input type="submit" name="Submit" value="REGISTER" class="form-control-submit-button"/>
+      </label></th>
+    </tr>
+  </table>
+</form>
+</body>
+
+{% endblock %}

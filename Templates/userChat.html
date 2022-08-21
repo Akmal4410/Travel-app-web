@@ -1,0 +1,19 @@
+{%extends 'hotelindex.html'%}
+{%block body%}
+
+
+<div align="center">
+<table width="200" border="1"   class="table">
+  <tr bgcolor="#113448">
+    <th scope="row">Username</th>
+    <td>&nbsp</td>
+  </tr>
+  {% for i in val %}
+  <tr>
+    <th scope="row">{{i[2]}}&nbsp{{i[3]}}</th>
+    <td><a href="chat2?id={{i[1]}}&nm={{i[2]}} {{i[3]}}" class="white">Chat</a></td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+{% endblock %}

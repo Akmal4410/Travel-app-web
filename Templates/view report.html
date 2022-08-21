@@ -1,0 +1,33 @@
+{%extends 'adminindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/viewreports1">
+  <table style="width:400px" class="table" align="center">
+
+    <tr bgcolor="#113448">
+      <th colspan="2" scope="row"><label>Type
+        <select name="select2">
+          <option>--select--</option>
+          <option>travelagency</option>
+          <option>hotel</option>
+        </select>
+      </label>
+        <input type="submit" value="search"></th>
+    </tr>
+    <tr bgcolor="#113448">
+      <th scope="row">Date</th>
+      <th>Report</th>
+    </tr>
+    {% for i in result%}
+    <tr>
+      <td>{{i[0]}}</td>
+      <td><a href="./static/reports/{{i[1]}}" class="white">{{i[1]}}</a></td>
+    </tr>
+    {% endfor %}
+
+  </table>
+</form>
+</body>
+
+{% endblock %}

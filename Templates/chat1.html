@@ -1,0 +1,24 @@
+{% extends 'travelagencyindex.html' %}
+{% block body%}
+
+
+<form action="/chatinsert1" method="post">
+<table width="252" border="1" align="center"id="customers">
+  <tr>
+    <td width="242"><div align="center">{{nm}}</div></td>
+  </tr>
+  {% for i in val %}
+  <tr {% if i[1]|string == id %} align="right" {% endif %}>
+    <td> {{i[3]}} </td>
+  </tr>
+  {% endfor %}
+  <tr>
+    <td><div align="center">
+      <input type="text" name="textfield"  />
+      <input type="submit" name="Submit" value="Send" class="form-control-submit-button"/>
+    </div></td>
+  </tr>
+</table>
+
+</form>
+{% endblock %}

@@ -1,0 +1,29 @@
+{%extends 'adminindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table  class="table" style="width:1000px" align="center">
+    <tr bgcolor="#113448">
+      <th width="211" height="32" scope="row">Name</th>
+      <th width="89">Gender</th>
+      <th width="123">DOB</th>
+      <th width="198">Email</th>
+      <th width="139">Phone Number </th>
+      <th width="177">Address</th>
+    </tr>
+    {% for i in result%}
+    <tr>
+      <td height="54">{{i[2]}} {{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[7]}}</td>
+      <td>{{i[8]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+
+{%endblock%}

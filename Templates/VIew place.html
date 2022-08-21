@@ -1,0 +1,36 @@
+{% extends 'travelagencyindex.html' %}
+{% block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addplace">
+  <table  align="center" style="width:800px" class="table">
+    <tr bgcolor="#113448">
+      <th width="36" scope="row">Place</th>
+      <th width="53">Lattitude</th>
+      <th width="60">Longitude</th>
+      <th width="69">Description</th>
+      <th width="37">Image</th>
+      <td width="28">&nbsp;</td>
+      <td width="28">&nbsp;</td>
+    </tr>
+    {% for i in result %}
+    <tr>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td><img src = "./static/placeimage/{{i[6]}}" height="100" width="100"></td>
+      <td><a href="/editplace?id={{i[0]}}" class="white">Edit</a></td>
+      <td><a href="/deleteplace?id={{i[0]}}" class="white">Delete</a></td>
+    </tr>
+    {% endfor %}
+    <tr align="center">
+      <th colspan="7" scope="row">
+        <input type="submit" name="Submit" value="ADD" class="form-control-submit-button"/>
+      </th>
+    </tr>
+  </table>
+</form>
+</body>
+
+{% endblock %}

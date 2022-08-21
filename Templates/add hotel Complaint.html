@@ -1,0 +1,22 @@
+{% extends 'hotelindex.html'%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addhotelcomplaint1">
+  <table  align="center" style="width:300px">
+    <tr>
+      <th scope="row">Complaint</th>
+      <td><label>
+        <input type="text" name="textfield" required class="form-control"/>
+      </label></td>
+    </tr>
+    <tr align="center">
+      <th colspan="2" scope="row"><label>
+        <input type="submit" name="Submit" value="Send" class="form-control-submit-button"/>
+      </label></th>
+    </tr>
+  </table>
+</form>
+</body>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{%extends 'adminindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addhotelregistration">
+  <table width="1045" align="center"  class="table" style="width:1000px;">
+    <tr bgcolor="#113448">
+      <th width="112">Hotel Name </th>
+      <th width="85">Place</th>
+      <th width="75">Post</th>
+      <th width="95">Pin</th>
+      <th width="153">Email</th>
+      <th width="111">Phone</th>
+      <th width="109">Photo</th>
+      <th width="72">Type</th>
+      <th width="72">&nbsp;</th>
+      <th></th>
+    </tr>
+    {% for i in result%}
+    <tr>
+
+      <td >{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[7]}}</td>
+      <td><img src = "./static/image/{{i[8]}}" height="100" width="100"></td>
+      <td>{{i[9]}}</td>
+      <td><p><a href="/edithotel?id={{i[1]}}" class="white">Edit </a></p></td>
+      <td width="72"><p><a href="/deletehotel?id={{i[1]}}" class="white">Delete </a></p></td>
+    </tr>
+    {% endfor %}
+    <tr align="center">
+      <br>
+      <td  colspan="10"> <input type="submit" name="Submit" value="Add New" class="form-control-submit-button" /></td>
+
+    </tr>
+  </table>
+</form>
+</body>
+
+{%endblock%}

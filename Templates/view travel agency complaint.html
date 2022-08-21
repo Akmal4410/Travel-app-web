@@ -1,0 +1,33 @@
+{% extends 'travelagencyindex.html' %}
+{% block body%}
+
+
+<body>
+<form action="/addtravelagencycomplaints" method="post">
+<table width="200" class="table" style="width:800px" align="center">
+
+  <tr bgcolor="#113448">
+    <th scope="row">Date</th>
+    <th>Travel Agency Complaint </th>
+    <th>Replay</th>
+  </tr>
+  {% for i in result %}
+
+<tr>
+  <td>{{i[3]}}</td>
+  <td>{{i[2]}}</td>
+  <td>{{i[4]}}</td>
+  </tr>
+{%endfor%}
+<tr align="center">
+    <th colspan="3" scope="row">
+      <input type="submit" name="Submit" value="Add" class="form-control-submit-button"/>
+    </th>
+  </tr>
+</table>
+
+</form>
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{%extends 'adminindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addtravelagency1">
+<table width="302" style="width:302px" align="center">
+    <tr>
+      <th  scope="row">Agency name </th>
+      <td ><label>
+        <input type="text" name="textfield" required pattern="[A-Z a-z.]{3,25}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Place</th>
+      <td><label>
+        <input type="text" name="textfield2" required pattern="[A-Z a-z.]{3,25}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Post</th>
+      <td><label>
+        <input type="text" name="textfield3" required pattern="[A-Z a-z.]{3,25}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Pin</th>
+      <td><label>
+        <input type="text" name="textfield4" required pattern="[0-9]{6}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><label>
+        <input type="text" name="textfield5" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Phone</th>
+      <td><label>
+        <input type="text" name="textfield6" required pattern="[6789][0-9]{9}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Username</th>
+      <td><label>
+        <input type="text" name="textfield7" required class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Password</th>
+      <td><label>
+        <input type="password" name="textfield8" required class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr align="center">
+      <th colspan="2" scope="row">
+        <input type="submit" name="Submit2" value="REGISTER"  class="form-control-submit-button"/>
+     </th>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

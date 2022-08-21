@@ -1,0 +1,60 @@
+{%extends 'adminindex.html'%}
+{%block body%}
+
+<body>
+
+<form id="form1" name="form1" method="post" action="/searchcomplaints" >
+
+
+    <table  class="table" style="width:600px" align="center">
+      
+      
+      <tr bgcolor="#113448">
+        <th colspan="4" scope="row" ><label>Type
+          <select name="select2">
+            <option>--select--</option>
+            <option>travelagency</option>
+            <option>hotel</option>
+            <option>user</option>
+            </select>
+          </label>
+          <input name="submit" type="submit" value="search" required />
+        <br /></th>
+      </tr>
+      <tr bgcolor="#113448">
+        <th width="126" scope="row">Date</th>
+        <th width="154"> Name </th>
+        <th width="173">Complaint</th>
+        <td width="91">&nbsp;</td>
+      </tr>
+      {% for i in result %}
+      <tr>
+        {% if type=="user" %}
+        <td>{{i[4]}}</td>
+        <td>{{i[0]}} {{i[1]}}</td>
+        <td>{{i[4]}}</td>
+      {% endif %}
+      {% if type==  "travelagency" %}
+        <td>{{i[4]}}</td>
+        <td>{{i[0]}} </td>
+        <td>{{i[3]}}</td>
+      {% endif %}
+      {% if type==  "hotel" %}
+        <td>{{i[4]}}</td>
+        <td>{{i[0]}} </td>
+        <td>{{i[3]}}</td>
+      {% endif %}
+
+        <td><a href="/reply?id={{i[1]}}" class="white">Reply</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+
+  <div align="center"></div>
+</form>
+
+
+
+</body>
+
+{%endblock%}

@@ -1,0 +1,34 @@
+{% extends 'travelagencyindex.html' %}
+{% block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addpackages">
+  <table width="200" class="table" align="center" style="width:700px">
+    <tr bgcolor="#113448">
+      <th>Packages Details </th>
+      <th>Food availability</th>
+      <th>Rate</th>
+      <td>&nbsp;</td>
+      <td></td>
+    </tr>
+    {% for i in result %}
+    <tr>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}      </td>
+      <td>{{i[4]}}     </td>
+      <td><a href="/editpackages?id={{i[0]}}" class="white">Edit</a></td>
+      <td><a href="/deletepackages?id={{i[0]}}" class="white">Delete</a></td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="5" align="center">
+
+          <input type="submit" name="Submit" value="Add new Package" class="form-control-submit-button"/>
+
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+
+{% endblock %}

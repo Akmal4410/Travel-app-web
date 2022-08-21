@@ -1,0 +1,27 @@
+{% extends 'travelagencyindex.html' %}
+{% block body%}
+
+
+<body>
+<form action="/addtravelagencycomplaints1" method="post">
+<table  style="widthy:400px" align="center">
+  <tr>
+    <th scope="row">Travel Agency Complaint
+    </th>
+    <td><label>
+      <input type="text" name="textfield" required class="form-control"/>
+    </label></td>
+  </tr>
+  <tr>
+     <td><p></p></td>
+   </tr>
+  <tr align="center">
+    <th colspan="2" scope="row">
+      <input type="submit" name="Submit" value="Send" class="form-control-submit-button"/>
+    </th>
+  </tr>
+</table>
+  </form>
+</body>
+
+{% endblock %}

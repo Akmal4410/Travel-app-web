@@ -1,0 +1,35 @@
+{%extends 'hotelindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addroomdetails">
+  <table width="247" style="width:800px" class="table" align="center">
+    <tr bgcolor="#113448">
+      <th width="69" scope="row">Room details </th>
+      <th width="31">Price</th>
+      <th width="30">A/C type </td>
+      <th width="57">Bedroom type </th>
+      <th width="26">&nbsp;</th>
+      <td width="1"></td>
+
+    </tr>
+    {% for i in result %}
+    <tr>
+      <td>{{i[2]}}</th>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td><a href="/editroom?id={{i[0]}}" class="white">Edit</a></td>
+      <td><a href="/deleteroom?id={{i[0]}}" class="white">Delete</a></td>
+    </tr>
+    {% endfor %}
+    <tr align="center">
+      <th colspan="6" scope="row">
+        <input type="submit" name="Submit" value="ADD" class="form-control-submit-button"/>
+     </th>
+    </tr>
+  </table>
+</form>
+</body>
+
+{% endblock %}

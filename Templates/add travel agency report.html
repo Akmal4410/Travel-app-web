@@ -1,0 +1,28 @@
+{% extends 'travelagencyindex.html' %}
+{% block body%}
+
+
+<body>
+<form action="/addtravelagencyreport1" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="200" align="center" >
+    <tr>
+      <th width="68">Travel Agency Report</th>
+      <td ><label>
+
+        <input type="file" name="file" required/>
+      </label></td>
+    </tr>
+    <tr><td>
+      <p></p>
+    </td>
+    </tr>
+    <tr align="center">
+      <th colspan="1" scope="row">
+        <input type="submit" name="Submit" value="Send" class="form-control-submit-button"/>
+      </th>
+    </tr>
+  </table>
+</form>
+</body>
+
+{% endblock %}

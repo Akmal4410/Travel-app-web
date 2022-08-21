@@ -1,0 +1,84 @@
+{%extends 'adminindex.html'%}
+{%block body%}
+
+<body>
+
+<form id="form1" name="form1" method="post" action="/addhotelregistration1" enctype="multipart/form-data" >
+
+  <table  align="center" style="width:600px" >
+    <tr>
+      <th scope="row">Hotel name </th>
+      <td><label>
+        <input type="text" name="textfield" required pattern="[A-Z a-z.]{3,25}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Place</th>
+      <td><label>
+        <input type="text" name="textfield2" required pattern="[A-Z a-z.]{3,25}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Post</th>
+      <td><label>
+        <input type="text" name="textfield3" required pattern="[A-Z a-z.]{3,25}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Pin</th>
+      <td><label>
+        <input type="text" name="textfield4" required pattern="[0-9]{6}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><label>
+        <input type="text" name="textfield5" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Phone</th>
+      <td><label>
+        <input type="text" name="textfield6" required pattern="[6789][0-9]{9}" class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Photo</th>
+      <td><label>
+        <input name="textfield7" type="file" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Type</th>
+      <td><label>
+       2 star <input type="radio" value="2star" name="textfield8" checked/>
+        3 star <input type="radio" value="3star" name="textfield8" />
+        4 star <input type="radio" value="4star" name="textfield8" />
+        5 star <input type="radio" value="5star" name="textfield8" />
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Username</th>
+      <td><label>
+        <input type="text" name="textfield9" required class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Password</th>
+      <td><label>
+        <input type="password" name="textfield10" required class="form-control-input"/>
+      </label></td>
+    </tr>
+    <tr align="center">
+      <th colspan="1" scope="row">
+        <input type="submit" name="Submit" value="Register" class="form-control-submit-button"/>
+
+      </th>
+    </tr>
+  </table>
+
+</form>
+</center>
+</body>
+
+{% endblock %}
